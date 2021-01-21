@@ -73,131 +73,80 @@
 
         <main class="main col col-md-6 col-lg-8">
           <!-- .slide: data-state="layout-title" class="bg-dark"-->
-<h1 id="graphql-concepts">GraphQL Concepts <a class="direct-link" href="#graphql-concepts"> </a></h1>
+<h1 id="react-installation">React Installation <a class="direct-link" href="#react-installation"> </a></h1>
 <div class="slide-link"><a href="URL"><i class="fab fa-slideshare"></i> URL</a></div>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Before we get going with GraphQL, let's take a look at some concepts.</p>
-<blockquote>
-<blockquote></blockquote>
-</blockquote>
-<p>GraphQL is an open source query language for managing data on a server.</p>
-<p>What makes it unique is that it lets you retrieve a lot of information quicker than with traditional REST APIs and also do it in less requests to the server.</p>
-<p>Github's version allow you to look up the information about your account and repositories and is a good place to experiment with GraphQL.</p>
-<p>One way to experiment with that data is to use the <a href="https://docs.github.com/en/free-pro-team@latest/graphql/overview/explorer">Github GraphQL Explorer</a>.</p>
-<p><img src="http://pixelprowess.com/i/2021-01-12_00-55-33.png" alt="The Github GraphQL Explorer"></p>
-<p>This lets you use your real, live production data from Github as if you were in an app that's already authenticated. The Explorer also has a lot of built in documentation.</p>
-<p>On the left hand side, there's a spot to type in your query (1), you should see a basic query that will get your login.</p>
-<pre><code>query { 
-  viewer { 
-    login
-  }
-}
-</code></pre>
-<p>If you hit the play button(2), you can see the results on the right hand side (3). The results are in JSON (JavaScript Object Notation) format, which is easily consumed by JavaScript.</p>
-<p>You'll notice that the GraphQL request Syntax is something close to JSON or JavaScript Object Notation.</p>
-<p>What your receive back is JSON (JavaScript Object Notation), which is easy to digest into JavaScript.</p>
-<p>When you make a request on the right hand side, you'll see a documentation button on the right hand side which will open a new tab</p>
-<p><img src="http://pixelprowess.com/i/2021-01-12_01-05-13.png" alt="Documentation"></p>
-<p>This section will change depending on your query and it allows you to search through the GraphQL docs.</p>
-<p>There's also three tabs named <code>prettify</code> which will clean up the indending of your code, <code>history</code>, which goes through all the queries you've made and <code>Explorer</code>, which lets you navigate through the documentation via an index.</p>
-<p>There's a section at the bottom that lets you try out different variables to use with your data as well.</p>
+<p>The Create React App makes it easier to create a project by installing a lot of tools, so let's go over what we get when we used the application. If you're comfortable with React Installations, you might want to skip this video.</p>
 <hr>
-<h1 id="graphql-queries">GraphQL Queries <a class="direct-link" href="#graphql-queries"> </a></h1>
+<h1 id="modules">Modules <a class="direct-link" href="#modules"> </a></h1>
 <ul>
-<li>Schema</li>
-<li>Fields</li>
-<li>Types</li>
+<li><a href="https://webpack.js.org/">Webpack</a></li>
+<li><a href="https://babeljs.io/">Babel</a></li>
+<li><a href="https://eslint.org/">ES Lint</a> | <small><a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">extension</a></small></li>
+<li><a href="https://jestjs.io/">Jest</a></li>
+<li><a href="https://web.dev/">Web Vitals</a></li>
 </ul>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Let's talk about the structure of a the GraphQL query we just ran.</p>
-<p>The structure of all your data is known as the <code>schema</code></p>
-<p>Searches are done by using looking through different <code>fields</code> and sub-fields. So, in our example, query is a field we're looking for.</p>
-<p>The fields can be of different types. You're probably familiar with some traditional types like strings, integers and booleans, but each GraphQL instance also has it's own custom types.</p>
+<p>Webpack is a JavaScript bundler. It's main job is to manage how your application is assembled and the loading of your different modules into an application.</p>
+<p>Babel is a JavaScript compiler, it lets you write code with the latest javascript features and it will convert that so that it works with older browsers.</p>
+<p>ES Lint is a JavaScript linter, which analyzes your code against certain rules and helps you fix them. You might need to have an extension installed on your editor to use this. You can find one for Visual Studio code at this link.</p>
+<p>You also get Jest a testing framework if you want to run tests on your javascript code.</p>
+<p>And then you get something called Web Vitals, which is a performance monitoring tools for your site measuring peformance, acessibility and best practices.</p>
 <hr>
-<h1 id="graphql-requests">GraphQL Requests <a class="direct-link" href="#graphql-requests"> </a></h1>
-<ul>
-<li>Queries</li>
-<li>Mutations</li>
-</ul>
+<!-- .slide: data-state="layout-title" class="bg-dark" -->
+<h1 id="project-config">Project Config <a class="direct-link" href="#project-config"> </a></h1>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>In the Github GraphQL API, there are two root types you can use.</p>
-<p>The first is <code>queries</code>. This is a simple request for information from the server. The query type has a number of sub-fields you can request. In our example, we asked for the viewer, but you can also ask for information about organizations,  repos or users.</p>
-<p>The second is a mutation. This creates a request to modify data on the Github servers.</p>
+<p>Let's take a look at the actualy installation.</p>
+<p>First is the <code>README.md</code> file, it has a few of the instructions about the project. This might look a bit different if you look at our GitHub Repository because we customize these for GitHub Release.</p>
+<p>The <code>package.json</code> file is the file that node.js creates to manage the project. You can see a list of the default dependencies, which has some of the modules we just talked about.</p>
+<p>You can also see a <code>browserslist</code> section here, which helps your modules like WebPack know which browsers you're targeting for the build. You can see here that we're targeting browsers that are not opera mini. You can find more information about configuring on the <a href="https://github.com/browserslist/browserslist#readme">Github repo</a>.</p>
+<p>The <code>.gitignore</code> file is a git document that helps you control which documents are tracked by github. I already added a link to a file I'll be creating in the future.</p>
+<p>If you're using a Github repo, you might also see some additional file that we add for legal compliance like the LICENSE, NOTICE, CONTRIBUTING and other files. They're pretty self explanatory.</p>
 <hr>
-<h1 id="adding-other-fields">Adding other Fields <a class="direct-link" href="#adding-other-fields"> </a></h1>
-<pre><code>{
-  viewer {
-    login
-    name
-    bio
-    company
-    avatarUrl
-  }
-}
-
-</code></pre>
+<!-- .slide: data-state="layout-title" class="bg-dark" -->
+<h1 id="public-folder">Public Folder <a class="direct-link" href="#public-folder"> </a></h1>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>You can request more than one field, so let's add <code>name</code>, <code>bio</code>, <code>company</code> and <code>avatarUrl</code></p>
-<p>In the explorer, there are pop-up hints that appear as you type in the editor. It will show up if you type a letter, or you can use <code>ctrl-m</code> to make he hints appear at any time.</p>
-<p>Notes: It doesn't matter what order things are in, by the way and you can add a comment using a pound sign.</p>
+<p>Now, let's see how this React project is put together. The files in are in two main folders,</p>
+<p>The <code>public</code> folder has files that Webpack will manage. They will also be moved to the server when our project is deployed. You can see that there are icons and logos here that show up when we preview our application.</p>
+<p>There is also a <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest">manifest.json</a> file which is an experimental file for PWA or Progressive Web Applications. They allow your web projects to be installed in mobile browsers without building apps.</p>
+<p>The <code>robots.txt</code> gives web crawlers information about your sites. These are applications that search engines like Google use to get more iformation about your sites.</p>
+<p>The <code>index.html</code> file is the entry point for browsers, You can add thing and modify this file, but webpack will use this file to inject the javascript code you write as well as react code and other css.</p>
+<p>The single most important thing is the <code>&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</code> tag. This is where your application will be loaded.</p>
 <hr>
-<h2 id="arguments">Arguments <a class="direct-link" href="#arguments"> </a></h2>
+<!-- .slide: data-state="layout-title" class="bg-dark" -->
+<h1 id="react-files">React Files <a class="direct-link" href="#react-files"> </a></h1>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>You can pass arguments to repositories, so let's say I wanted information about a specific license you can use in repos.</p>
-<p>Let's use the docs to read how we would do this. Click on the Query field and scroll down to the license field. Note that it expects an argument called key and then a string. Now click on the license type to see details.</p>
-<p>Notice that it expects a <a href="https://spdx.org/licenses/">SPDX ID</a>, which are shortnames for all of the difference licenses.</p>
-<p>Because it has an <code>!</code> mark, I know that this is a required field. And notice that afterwards it explains that this item returns a License.</p>
-<p>I happen to know that the SPXID for the MIT license is just the word <code>MIT</code>, so let's try sending that.</p>
-<p>This type will also want to know which fields we want to ask for. If you click on the license type, you'll see that there are lots of other things we can ask for like the name, description,body, etc.</p>
-<pre><code>{
-  license(key: &quot;MIT&quot;) {
-    name
-    description
-    body
-    url
-  }
-}
-</code></pre>
-<p>Now take a peek at the explorer and you'll notice that you can also choose things from there, or see the structure of the fields. Somtimes it helps to see then in that outline format.</p>
+<p>The entry point for all your scripts is the <code>index.js</code> file let's take a look at that.</p>
+<p>This file imports a lot of code from different library including the <a href="https://reactjs.org/docs/react-api.html">React</a> and <a href="https://reactjs.org/docs/react-dom.html">ReactDOM</a> libraries. React is the main library for working with React. ReactDOM manages how the Document Object Model works with React.</p>
+<p>These are being loaded by node.js using what's listed as dependencies from your <code>package.json</code> file. If you're looking for them, you'll find them in the <code>node_modules</code> folder.</p>
+<p>Since we're using WebPack, you can include your CSS as an import with <code>import './index.css';</code> instead of using a link tag in your HTMl. This lets you have a CSS file for your entire application.</p>
+<p>We're also importing a configuration file <code>reportWebVitals.js</code> for the web vitals module we talked about earlier. We're calling that function at the bottom.</p>
+<p>Another import we're doing is for a React Module called App, although you don't see the extension, this is loading the file called App.js. You can ignore extensions when you load other javascript files.</p>
+<p>We're using the ReactDOM library inside our render command, you see some code to put React in <a href="https://reactjs.org/docs/strict-mode.html">strict mode</a> during development. Strict mode will complain if you write potentially dangerous code.</p>
+<p>The render command then loads up the App component as a module and then looks for an item with an <code>id</code> of <code>root</code> on your index.html file.</p>
 <hr>
-<h1 id="authorizing-with-graphql">Authorizing with GraphQL <a class="direct-link" href="#authorizing-with-graphql"> </a></h1>
-<p>In order to work with the Github GraphQL Application Programming Interface (API), we'll need to create an Authentication Token. It's a secret that will give an application access.</p>
-<p>Before you do this make sure you're logged in and that your email has been verified.</p>
-<ol>
-<li>Go to the top right of the page and click on your account's icon.</li>
-</ol>
-<p><img src="http://pixelprowess.com/i/2021-01-12_01-36-31.png" alt="Account Settings"></p>
-<ol start="2">
-<li>Go to <code>Developer Settings</code> on the left menu</li>
-<li>Click on <code>Personal Access Tokens</code></li>
-<li>Click on <code>Generate New Token</code></li>
-<li>Under Note add a label</li>
-<li>Check the appropriate permissions</li>
-</ol>
-<p>The permissions will give the application that you're trying to run access to the repo and you can control how much access you give my modifying these permissions.</p>
-<pre><code>[x] repo
-[ ] admin:org
-  [x] read:org
-[ ] admin:repo_hook
-  [x] read:repo_hook
-[x] user
-[ ] admin:gpg_key
-  [x] read:pgp_key
-</code></pre>
-<p>Once you do that, you'll see a personal access token. You can click on the icon to copy this to the clipboard. As it says, this is the only time you'll see this token so make sure you save it in a safe place.</p>
-<h2 id="entrypoint">Entrypoint <a class="direct-link" href="#entrypoint"> </a></h2>
-<p>When you need to receive some data, you can use the link to this endpoint: <a href="https://api.github.com/graphql">https://api.github.com/graphql</a></p>
-<p>and pass along the query.</p>
+<h1 id="app.js">App.js <a class="direct-link" href="#app.js"> </a></h1>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Since we loaded up <code>App.js</code> from <code>index.js</code>. Let's take a look at it next.</p>
+<p>There is a load command for a file here called <code>logo.svg</code> which is in the same folder. You can include images and logos in here, but they will be managed by webpack, which can be useful in automating things like compression.</p>
+<p>We're also loading a test for this document that's in a file called <code>App.test.js</code>. We installed the Jest testing library and this code shows some sample test code. There's a related file called <code>setupTests.js</code>.</p>
+<p>In the same way, we're loading up some CSS that will be tied to this component from an <code>App.css</code> file.</p>
+<p>Then we have a function that defines our component. I should mention that the code that although the code that follows looks like JavaScript, it's written in a language called JSX, which is a combination of JavaScript and HTML. So you can see that the we use a return statement that returns HTML looking code.</p>
+<p>I should also mention that this code uses the more modern React function syntax instead of the Class based syntax. We'll be using this throughout our project.</p>
+<p>JSX isn't exactly like HTML, so you'll see that whenever we want to use a <code>class</code>, we use a keyword called <code>className</code> instead. Standalone tags like <code>&lt;img&gt;</code> have to have the self closing slash at the end. Also note that to load the SVG icon, we use the import and then use the name we assigned to the import, which is logo.</p>
+<p>So, that's how our application loads. There's a lot going on here, but hopefully everything makes sense.</p>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
@@ -206,19 +155,22 @@
             <div class="">
                 <ol>
                     
-                    <li><a href="#graphql-concepts">GraphQL Concepts  </a>
+                    <li><a href="#react-installation">React Installation  </a>
             		</li>
 
-                    <li><a href="#graphql-queries">GraphQL Queries  </a>
+                    <li><a href="#modules">Modules  </a>
             		</li>
 
-                    <li><a href="#graphql-requests">GraphQL Requests  </a>
+                    <li><a href="#project-config">Project Config  </a>
             		</li>
 
-                    <li><a href="#adding-other-fields">Adding other Fields  </a>
+                    <li><a href="#public-folder">Public Folder  </a>
             		</li>
 
-                    <li><a href="#authorizing-with-graphql">Authorizing with GraphQL  </a>
+                    <li><a href="#react-files">React Files  </a>
+            		</li>
+
+                    <li><a href="#app.js">App.js  </a>
             		</li>
                 </ol>
             </div>
