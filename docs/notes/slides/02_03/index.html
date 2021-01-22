@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>00_02
+        <title>02_03
           --
-          Using the Exercises</title>
+          Authorizing with GraphQL</title>
       <link rel="stylesheet" href="../../../css/twemoji-amazing.css"/>
     <link rel="stylesheet" href="../../../css/bootstrap-rayveal.css"/>
     <link rel="stylesheet" href="../../../css/fontawesome.css"/>
@@ -33,11 +33,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
-                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="../../../notes/slides/00_02/index.html">
-                      <i class="fas fa-file-alt mr-2 lh-1  text-light "></i>00_02
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
+                    <a class="text-decoration-none  link-secondary  link-primary" href="../../../notes/slides/00_02/index.html">
+                      <i class="fas fa-file-alt mr-2 lh-1  text-primary "></i>00_02
                       Using the Exercises</a>
-                    <a class=" link-light  flex-fill ml-3 text-right" href="../../../?d=00_02&#">
+                    <a class=" link-secondary  flex-fill ml-3 text-right" href="../../../?d=00_02&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -87,11 +87,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
-                    <a class="text-decoration-none  link-secondary  link-primary" href="../../../notes/slides/02_03/index.html">
-                      <i class="fas fa-file-alt mr-2 lh-1  text-primary "></i>02_03
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
+                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="../../../notes/slides/02_03/index.html">
+                      <i class="fas fa-file-alt mr-2 lh-1  text-light "></i>02_03
                       Authorizing with GraphQL</a>
-                    <a class=" link-secondary  flex-fill ml-3 text-right" href="../../../?d=02_03&#">
+                    <a class=" link-light  flex-fill ml-3 text-right" href="../../../?d=02_03&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -109,35 +109,52 @@
 
         <main class="main col col-md-6 col-lg-8">
           <!-- .slide: data-state="layout-title" class="bg-dark"-->
-<h1 id="using-the-exercises">Using the Exercises <a class="direct-link" href="#using-the-exercises"> </a></h1>
+<h1 id="authorizing-with-graphql">Authorizing with GraphQL <a class="direct-link" href="#authorizing-with-graphql"> </a></h1>
+<div class="slide-link"><a href="https://go.raybo.org/2sff"><i class="fab fa-slideshare"></i> go.raybo.org/2sff</a></div>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Like tailwind, this course is a little bit different than most of my other courses. There are not exercise files, but you can find the code for this course on Github and Codpen.</p>
-<p>To get the code simply go to <a href="https://raybo.org/slides_tailwind/#/">raybo.org/slides_tailwind</a>.</p>
-<p>This will take you to a slideshow with all of the links you'll need for the course.</p>
-<p>At the bottom of the slideshow you'l find a navigation toolbar. You can hit the t key to show or hide the toolbar.</p>
-<p>You can also find links to the Github Repository for the course as well as contact information.</p>
-<p>If you hit the m key, you'll see an index of all of the slides for the course. If you click on a slide that slide will play on your monitor.</p>
-<p>At the beginning of each slide, there is an overlay with a link to each of the slides. If you're watching the video, you can jump to each of the slides at that URL.</p>
-<p>To move through the slides you can use the arrow keys.</p>
-<p>The slides are fully interactive, so you can click on buttons or interact with the code on screen.</p>
-<p>If you click inside a text area and get stuck, just double click towards the top of the slides.</p>
-<p>You also have access to a micro site with all of my notes for this course, Just open up the slide index by hitting the m key and then click on notes.</p>
-<p>You can navigate to each of my notes on the left navigation and on the right go through each of the sections on slides.</p>
-<p>If you want to go back to slide view click on the icon to the right of the index.</p>
-<p>A lof of the slides have links to Codepen demos where you can follow along with me on code or try it yourself.</p>
-<p>Towards the beginning of the course, you can get to a github repo that has some of the code for the course. The link to the repo is at the bottom of the slides.</p>
-<p>The repository is built so that there are branches for each of the videos in the course.</p>
-<p>You can use this Branch popup right here to switch to a specific branch and take a look at the code at that stage.</p>
-<p>For example, the branch titled 01_02 would show you the code on Chapter 1 and show the 2nd Video in that chapter. If you see a letter b at the end of the name, it means that’s how the code looked at the beginning of the video, if you see an e at the end of the branch, that’s how the code looked at the end of the video.</p>
-<p>If you want to, you can download the course by clicking on the code button and then choosing one of the options like Open with CodeSpaces or Github Desktop.</p>
-<p>If you’re familiar with terminal commands, you can also download the repo by using the clipboard icon to copy the link.</p>
-<p>We recommend that you download the main branch and issue an NPM install command.</p>
-<p>You can also look at the code or download any of these branches  by going to the branch popup first, and then using the Code button. That way you can download the ZIP file for the specific video you want to follow along with.</p>
-<p>You may want to install node.js, which has npm as well as gulp before you do this.</p>
-<p>If you need more experience working with Git and GitHub, do a search for Learning Git and Github in our library.</p>
-<p>If you’re comfortable with this, then let’s get started.</p>
+<p>In order to work with the Github GraphQL Application Programming Interface (API), we'll need to create an Authentication Token. It's a secret that will give an application access to the Github GraphQL from within React.</p>
+<p>Before you do this make sure you're logged in and that your email has been verified.</p>
+<ol>
+<li>Go to the top right of the page and click on your account's icon.</li>
+</ol>
+<p><img src="http://pixelprowess.com/i/2021-01-12_01-36-31.png" alt="Account Settings"></p>
+<ol start="2">
+<li>Go to <code>Developer Settings</code> on the left menu</li>
+<li>Click on <code>Personal Access Tokens</code></li>
+<li>Click on <code>Generate New Token</code></li>
+<li>Under Note add a label</li>
+<li>Check the appropriate permissions</li>
+</ol>
+<p>The permissions will give the application that you're trying to run access to the repo and you can control how much access you give my modifying these permissions.</p>
+<pre><code>[x] repo
+[ ] admin:org
+  [x] read:org
+[ ] admin:repo_hook
+  [x] read:repo_hook
+[x] user
+[ ] admin:gpg_key
+  [x] read:pgp_key
+</code></pre>
+<p>Once you do that, you'll see a personal access token. You can click on the icon to copy this to the clipboard. As it says, this is the only time you'll see this token so make sure you save it in a safe place.</p>
+<hr>
+<h2 id="building-a-database-entry-file-db.js">Building a database entry file db.js <a class="direct-link" href="#building-a-database-entry-file-db.js"> </a></h2>
+<pre><code>const github = {
+  baseURL: &quot;https://api.github.com/graphql&quot;,
+  username: &quot;USERNAME&quot;,
+  headers: {
+    &quot;Content-Type&quot;: &quot;application/json&quot;,
+    Authorization: &quot;bearer ACCESS_TOKEN&quot;,
+  }
+}
+
+export default github
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Because we added this file to our .gitignore document, this file will not be in the repository for this course. You'll have to create it locally on your own computer.</p>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
@@ -146,7 +163,7 @@
             <div class="">
                 <ol>
                     
-                    <li><a href="#using-the-exercises">Using the Exercises  </a>
+                    <li><a href="#authorizing-with-graphql">Authorizing with GraphQL  </a>
             		</li>
                 </ol>
             </div>

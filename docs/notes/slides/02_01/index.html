@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>02_01
           --
-          GraphQL Concepts</title>
+          Exploring GraphQL</title>
       <link rel="stylesheet" href="../../../css/twemoji-amazing.css"/>
     <link rel="stylesheet" href="../../../css/bootstrap-rayveal.css"/>
     <link rel="stylesheet" href="../../../css/fontawesome.css"/>
@@ -45,7 +45,7 @@
                   <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
                     <a class="text-decoration-none  link-secondary  link-primary" href="../../../notes/slides/01_01/index.html">
                       <i class="fas fa-file-alt mr-2 lh-1  text-primary "></i>01_01
-                      Getting Started</a>
+                      Installing Requirements</a>
                     <a class=" link-secondary  flex-fill ml-3 text-right" href="../../../?d=01_01&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
@@ -72,8 +72,26 @@
                   <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
                     <a class="text-decoration-none  fw-bolder link-light  link-primary" href="../../../notes/slides/02_01/index.html">
                       <i class="fas fa-file-alt mr-2 lh-1  text-light "></i>02_01
-                      GraphQL Concepts</a>
+                      Exploring GraphQL</a>
                     <a class=" link-light  flex-fill ml-3 text-right" href="../../../?d=02_01&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
+                    <a class="text-decoration-none  link-secondary  link-primary" href="../../../notes/slides/02_02/index.html">
+                      <i class="fas fa-file-alt mr-2 lh-1  text-primary "></i>02_02
+                      Building Queries</a>
+                    <a class=" link-secondary  flex-fill ml-3 text-right" href="../../../?d=02_02&#">
+                      <i class="fab fa-slideshare"></i>
+                    </a>
+                  </div>
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
+                    <a class="text-decoration-none  link-secondary  link-primary" href="../../../notes/slides/02_03/index.html">
+                      <i class="fas fa-file-alt mr-2 lh-1  text-primary "></i>02_03
+                      Authorizing with GraphQL</a>
+                    <a class=" link-secondary  flex-fill ml-3 text-right" href="../../../?d=02_03&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -91,20 +109,38 @@
 
         <main class="main col col-md-6 col-lg-8">
           <!-- .slide: data-state="layout-title" class="bg-dark"-->
-<h1 id="graphql-concepts">GraphQL Concepts <a class="direct-link" href="#graphql-concepts"> </a></h1>
-<div class="slide-link"><a href="URL"><i class="fab fa-slideshare"></i> URL</a></div>
+<h1 id="exploring-graphql">Exploring GraphQL <a class="direct-link" href="#exploring-graphql"> </a></h1>
+<div class="slide-link"><a href="https://go.raybo.org/2seq"><i class="fab fa-slideshare"></i> go.raybo.org/2seq</a></div>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Before we get going with GraphQL, let's take a look at some concepts.</p>
+<p>Before we get going with GraphQL, let's talk about what it is, and how you can use it with Github.</p>
+<hr>
+<h1 id="graphql">GraphQL <a class="direct-link" href="#graphql"> </a></h1>
+<ul>
+<li><a href="https://graphql.org/">Query Language</a></li>
+<li>Get what you need</li>
+<li>From Facebook</li>
+<li>Open Source</li>
+</ul>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>GraphQL is an open source query language for managing data on a server.</p>
-<p>What makes it unique is that it lets you retrieve a lot of information quicker than with traditional REST APIs and also do it in less requests to the server.</p>
-<p>Github's version allow you to look up the information about your account and repositories and is a good place to experiment with GraphQL.</p>
-<p>One way to experiment with that data is to use the <a href="https://docs.github.com/en/free-pro-team@latest/graphql/overview/explorer">Github GraphQL Explorer</a>.</p>
-<p><img src="http://pixelprowess.com/i/2021-01-12_00-55-33.png" alt="The Github GraphQL Explorer"></p>
+<p>GraphQL is an open source Query Language for managing data on a server.</p>
+<p>What makes it unique is that it lets you retrieve everyting you need in a single call. You get a lot of information quicker than with traditional REST APIs and in less requests to the server.</p>
+<p>Like React, GraphQL was created by facebook and has been running their mobile apps since 2012, which in web years, it's real long time. Just imagine how efficient and fast it has to be to run all the data from Facebook.</p>
+<p>It's been an open source project that runs under it's own foundation since 2018. It's also used by Github and many other companies, so it's battle tested.</p>
+<hr>
+<h1 id="github-graphql">GitHub GraphQL <a class="direct-link" href="#github-graphql"> </a></h1>
+<ul>
+<li>Account Info</li>
+<li><a href="https://docs.github.com/en/free-pro-team@latest/graphql/overview/explorer">GraphQL Explorer</a></li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Github's version allow you to look up the information about your account and repositories and is a good place to get some practical experience with GraphQL.</p>
+<p>If you want to play around with your data, you can use the <img src="http://pixelprowess.com/i/2021-01-12_00-55-33.png" alt="The Github GraphQL Explorer"></p>
 <p>This lets you use your real, live production data from Github as if you were in an app that's already authenticated. The Explorer also has a lot of built in documentation.</p>
 <p>On the left hand side, there's a spot to type in your query (1), you should see a basic query that will get your login.</p>
 <pre><code>query { 
@@ -113,6 +149,11 @@
   }
 }
 </code></pre>
+<hr>
+<h1 id="graphql-explorer">GraphQL Explorer <a class="direct-link" href="#graphql-explorer"> </a></h1>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
 <p>If you hit the play button(2), you can see the results on the right hand side (3). The results are in JSON (JavaScript Object Notation) format, which is easily consumed by JavaScript.</p>
 <p>You'll notice that the GraphQL request Syntax is something close to JSON or JavaScript Object Notation.</p>
 <p>What your receive back is JSON (JavaScript Object Notation), which is easy to digest into JavaScript.</p>
@@ -121,6 +162,7 @@
 <p>This section will change depending on your query and it allows you to search through the GraphQL docs.</p>
 <p>There's also three tabs named <code>prettify</code> which will clean up the indending of your code, <code>history</code>, which goes through all the queries you've made and <code>Explorer</code>, which lets you navigate through the documentation via an index.</p>
 <p>There's a section at the bottom that lets you try out different variables to use with your data as well.</p>
+<p>Before we get going, make sure you log into your account and take a peek at the graphQL explorer. It's a lot of fun.</p>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
@@ -129,7 +171,16 @@
             <div class="">
                 <ol>
                     
-                    <li><a href="#graphql-concepts">GraphQL Concepts  </a>
+                    <li><a href="#exploring-graphql">Exploring GraphQL  </a>
+            		</li>
+
+                    <li><a href="#graphql">GraphQL  </a>
+            		</li>
+
+                    <li><a href="#github-graphql">GitHub GraphQL  </a>
+            		</li>
+
+                    <li><a href="#graphql-explorer">GraphQL Explorer  </a>
             		</li>
                 </ol>
             </div>
