@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>05_02
+        <title>03_04
           --
-          Search Box</title>
+          UseCallback</title>
       <link rel="stylesheet" href="../../../css/twemoji-amazing.css"/>
     <link rel="stylesheet" href="../../../css/bootstrap-rayveal.css"/>
     <link rel="stylesheet" href="../../../css/fontawesome.css"/>
@@ -96,20 +96,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
-                    <a class="text-decoration-none  link-secondary  link-primary" href="../../../notes/slides/03_04/index.html">
-                      <i class="fas fa-file-alt mr-2 lh-1  text-primary "></i>03_04
-                      UseCallback</a>
-                    <a class=" link-secondary  flex-fill ml-3 text-right" href="../../../?d=03_04&#">
-                      <i class="fab fa-slideshare"></i>
-                    </a>
-                  </div>
-                
                   <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
-                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="../../../notes/slides/05_02/index.html">
-                      <i class="fas fa-file-alt mr-2 lh-1  text-light "></i>05_02
-                      Search Box</a>
-                    <a class=" link-light  flex-fill ml-3 text-right" href="../../../?d=05_02&#">
+                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="../../../notes/slides/03_04/index.html">
+                      <i class="fas fa-file-alt mr-2 lh-1  text-light "></i>03_04
+                      UseCallback</a>
+                    <a class=" link-light  flex-fill ml-3 text-right" href="../../../?d=03_04&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -127,42 +118,14 @@
 
         <main class="main col col-md-6 col-lg-8">
           <!-- .slide: data-state="layout-title" class="bg-dark"-->
-<h1 id="search-box">Search Box <a class="direct-link" href="#search-box"> </a></h1>
-<div class="slide-link"><a href="https://go.raybo.org/2tcJ"><i class="fab fa-slideshare"></i> go.raybo.org/2tcJ</a></div>
+<h1 id="usecallback">UseCallback <a class="direct-link" href="#usecallback"> </a></h1>
+<div class="slide-link"><a href="https://go.raybo.org/2sff"><i class="fab fa-slideshare"></i> go.raybo.org/2sff</a></div>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>I know you don't want to see my type all of the code for our search interface, so you can find a slide with the code on this page. We'll spend some time wiring it up.</p>
-<hr>
-<h1 id="search-box-1">Search Box <a class="direct-link" href="#search-box-1"> </a></h1>
-<pre><code class="language-jsx">&lt;div className=&quot;d-flex align-items-center bg-light px-3 py-2 small rounded-3&quot;&gt;
-  &lt;div className=&quot;d-flex align-items-center flex-grow-1&quot;&gt;
-    &lt;label htmlFor=&quot;queryString&quot; className=&quot;me-2 fw-bold text-secondary&quot;&gt;
-      Search
-    &lt;/label&gt;
-    &lt;input
-      id=&quot;queryString&quot;
-      className=&quot;form-control form-control-sm me-2&quot;
-      type=&quot;text&quot;
-    /&gt;
-  &lt;/div&gt;
-  &lt;div className=&quot;d-flex align-items-center&quot;&gt;
-    &lt;label htmlFor=&quot;pageCount&quot; className=&quot;me-2 fw-bold text-secondary&quot;&gt;
-      Show
-    &lt;/label&gt;
-    &lt;input
-      id=&quot;pageCount&quot;
-      className=&quot;form-control form-control-sm text-center me-2&quot;
-      type=&quot;number&quot;
-      min=&quot;1&quot;
-      max=&quot;100&quot;
-    /&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;b className=&quot;me-2 text-secondary&quot;&gt;Total:&lt;/b&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+<p>You might notice that our application is retrieving the data twice. That's because the useEffect will re-render this data as we fetch it from the server.</p>
+<p>As our application grows, this will become more of a problem, so we can use the UseCallback hook to optimize how and when items are re-rendered in our application. This is specially usefull for our fetch command.</p>
+<p>Let's take care of it.</p>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
@@ -171,10 +134,7 @@
             <div class="">
                 <ol>
                     
-                    <li><a href="#search-box">Search Box  </a>
-            		</li>
-
-                    <li><a href="#search-box-1">Search Box  </a>
+                    <li><a href="#usecallback">UseCallback  </a>
             		</li>
                 </ol>
             </div>
